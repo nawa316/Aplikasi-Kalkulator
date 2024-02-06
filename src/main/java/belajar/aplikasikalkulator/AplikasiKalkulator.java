@@ -155,6 +155,12 @@ public class AplikasiKalkulator {
         System.out.println(operationPhy2(array));
     }
     
+    public static int operationTri(int[] number){
+       int tri = (number[0] * number[1])/ 2;
+       return tri;
+    }
+    
+    //Input segment
     public static int inputPilih(String info){
         System.out.println(info + ": ");
         return scanner.nextInt();
@@ -310,7 +316,7 @@ public class AplikasiKalkulator {
         if (input == 1){
             viewOperationPhy();
         } else if (input == 2){
-            //coming soon
+            viewOperationTri();
         } else if (input == 3){
            //Kembali
         } else if (input == 0){
@@ -363,6 +369,16 @@ public class AplikasiKalkulator {
         var array = inputData1("Data");
         hasil = operationPhy2(array);
         viewHasil(); 
+    }
+    
+    public static void viewOperationTri(){
+        System.out.println("");
+        System.out.println("LUAS SEGITIGA");
+        System.out.println("Masukkan nilai panjang alas dan tingginya");
+        
+        var array = inputData1("Data");
+        hasil = operationTri(array);
+        viewHasil();
     }
     
     public static void viewHasil(){
